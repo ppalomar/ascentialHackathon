@@ -10,21 +10,23 @@ import './CountryDetails.css';
 
 const CountryDetails = ({ selectedCountryCode }) => {
     const [{ loading, data }]  = useCountryDetails();
-
-    if(!selectedCountryCode) {
-        return <div className="pick">
-            Pick a country from the map
-            </div>;
-    };
-
+    
     return (
         <div className='container'>
-            <h1>
-                {COUNTRIES_ISO[selectedCountryCode]}
-            </h1>
-            <div className="detailsContainer">
-                <Table loading={loading} data={data}/>
-            </div>
+            {!selectedCountryCode ? (
+                <div className="pick">
+                    Pick a country from the map
+                </div>
+            ) : (
+            <>
+                <h1>
+                    {COUNTRIES_ISO[selectedCountryCode]}
+                </h1>
+                <div className="detailsContainer">
+                    <Table loading={loading} data={data}/>
+                </div>
+            </>
+            )}
         </div>  
     );
 };

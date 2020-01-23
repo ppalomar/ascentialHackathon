@@ -36,10 +36,10 @@ const Map = ({ mapData, onClick }) => {
           },
           hover: {
             "fill-opacity": 0.8,
-            cursor: "pointer"
+            cursor: "pointer",
           },
           selected: {
-            fill: "#2938bc" //color for the clicked country
+            fill: "#2938bc"
           },
           selectedHover: {}
         }}

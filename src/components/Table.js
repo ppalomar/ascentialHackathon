@@ -29,7 +29,7 @@ const columns = [
 ];
 
 const options = {
-    // filterType: 'checkbox',
+    selectableRows: false,
   };
 
 const CountryDetails = ({ data }) => {
