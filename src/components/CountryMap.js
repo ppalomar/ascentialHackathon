@@ -1,7 +1,10 @@
 import React from "react";
 import { VectorMap } from "react-jvectormap";
+import c from 'classnames';
 
-const Map = ({ mapData, onClick }) => {
+import './CountryMap.css';
+
+const Map = ({ loading, mapData, onClick }) => {
   const mapDataConverted = mapData.reduce((aux, c) => {
     return {
       ...aux,
@@ -15,7 +18,7 @@ const Map = ({ mapData, onClick }) => {
     }
   }
   return (
-    <div>
+    <div className={c({ mapLoading: loading })}>
       <VectorMap
         map={"world_mill"}
         backgroundColor="transparent" //change it to ocean blue: #0077be

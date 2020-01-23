@@ -15,8 +15,9 @@ function App() {
 
   return (
     <div className="MainContainer">
+      {loading && <div className="loading" >Loading...</div>}
       <CountryMap loading={loading} mapData={listOfCoutriesWithData} onClick={code => setSelectedCountryCode(code)} />
-      <CountryDetails selectedCountryCode={selectedCountryCode} />
+      {!loading && <CountryDetails selectedCountryCode={selectedCountryCode} />}
     </div>
   );
 }
