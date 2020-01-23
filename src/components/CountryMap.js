@@ -48,7 +48,7 @@ const Map = ({ mapData, onClick }) => {
           regions: [
             {
               values: mapDataConverted,
-              scale: ["#70a1ff", "#3742fa"], //your color game's here
+              scale: ["#70a1ff", "#1e90ff"], //your color game's here
               normalizeFunction: "polynomial"
             }
           ]

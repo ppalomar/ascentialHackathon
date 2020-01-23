@@ -18,6 +18,14 @@ const columns = [
       sort: true,
      }
     },
+    {
+        name: "score",
+        label: "Score",
+        options: {
+         filter: true,
+         sort: true,
+        }
+       },
 ];
 
 const options = {

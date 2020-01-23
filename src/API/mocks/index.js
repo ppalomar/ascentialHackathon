@@ -13,11 +13,13 @@ export const useCountryDetails = () => [
           translated_lang: "English",
           origin_text: "Hola",
           translated_text: "Hello",
+          score: 88,
       },{
         origin_lang: "Spainsh",
         translated_lang: "English",
         origin_text: "Adios",
         translated_text: "Bye",
+        score: 40,
     }],
     },
   ];
