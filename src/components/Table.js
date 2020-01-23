@@ -3,7 +3,7 @@ import MUIDataTable from "mui-datatables";
 
 const columns = [
     {
-     name: "origin_text",
+     name: "source",
      label: "Original Text",
      options: {
       filter: true,
@@ -11,7 +11,7 @@ const columns = [
      }
     },
     {
-     name: "translated_text",
+     name: "target",
      label: "Translation",
      options: {
       filter: true,

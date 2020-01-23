@@ -15,7 +15,14 @@ function App() {
 
   return (
     <div className="MainContainer">
-      {loading && <div className="loading" >Loading...</div>}
+      {loading && (
+        <div className="la-ball-newton-cradle la-3x loading">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
       <CountryMap loading={loading} mapData={listOfCoutriesWithData} onClick={code => setSelectedCountryCode(code)} />
       {!loading && <CountryDetails selectedCountryCode={selectedCountryCode} />}
     </div>
