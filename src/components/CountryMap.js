@@ -1,19 +1,19 @@
 import React from "react";
 import { VectorMap } from "react-jvectormap";
-const mapData = {
-  CN: 100000,
-  IN: 9900,
-  SA: 86,
-  EG: 70,
-  SE: 0,
-  FI: 0,
-  FR: 0,
-  US: 20
-};
-const handleClick = (e, countryCode) => {
-  console.log(countryCode);
-};
-const Map = () => {
+
+const Map = ({ mapData, onClick }) => {
+  const mapDataConverted = mapData.reduce((aux, c) => {
+    return {
+      ...aux,
+      [c]: 1000,
+    }
+  }, {});
+
+  const handleClick = (e, code) => {
+    if(mapData.includes(code)){
+      onClick(code);
+    }
+  }
   return (
     <div>
       <VectorMap
@@ -24,7 +24,7 @@ const Map = () => {
           width: "100%",
           height: "520px"
         }}
-        onRegionClick={handleClick} //gets the country code
+        onRegionClick={handleClick}
         containerClassName="map"
         regionStyle={{
           initial: {
@@ -43,15 +43,27 @@ const Map = () => {
           },
           selectedHover: {}
         }}
-        regionsSelectable={true}
+        regionsSelectable={false}
         series={{
           regions: [
             {
-              values: mapData, //this is your data
-              scale: ["#146804", "#ff0000"], //your color game's here
+              values: mapDataConverted,
+              scale: ["#70a1ff", "#3742fa"], //your color game's here
               normalizeFunction: "polynomial"
             }
           ]
+        }}
+        regionLabelStyle={{
+          initial: {
+            'font-family': 'Verdana',
+            'font-size': '12',
+            'font-weight': 'bold',
+            cursor: 'default',
+            fill: 'black'
+          },
+          hover: {
+            cursor: 'pointer'
+          }
         }}
       />
     </div>
