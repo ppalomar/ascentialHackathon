@@ -53,17 +53,8 @@ const Map = ({ mapData, onClick }) => {
             }
           ]
         }}
-        regionLabelStyle={{
-          initial: {
-            'font-family': 'Verdana',
-            'font-size': '12',
-            'font-weight': 'bold',
-            cursor: 'default',
-            fill: 'black'
-          },
-          hover: {
-            cursor: 'pointer'
-          }
+        onRegionTipShow={e => {
+          e.preventDefault();
         }}
       />
     </div>
