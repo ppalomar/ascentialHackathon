@@ -1,7 +1,7 @@
 export const useCountriesWithData = () => [
     {
       loading: false,
-      data: ['ES', 'FR', 'BR', 'IT'],
+      data: ['ES', 'FR', 'BR', 'IT', 'CN'],
     },
   ];
 

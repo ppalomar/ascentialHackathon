@@ -37,7 +37,7 @@ const CountryDetails = ({ data }) => {
     return (
         <div className='container'>
             <MUIDataTable
-                title={"Search Terms"}
+                title={`Search Terms (${data.length})`}
                 data={data}
                 columns={columns}
                 options={options}

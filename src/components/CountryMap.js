@@ -38,7 +38,7 @@ const Map = ({ loading, mapData, onClick }) => {
             "stroke-opacity": 0
           },
           hover: {
-            "fill-opacity": 0.8,
+            "fill-opacity": 0.7,
             cursor: "pointer",
           },
           selected: {
