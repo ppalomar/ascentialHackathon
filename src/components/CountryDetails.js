@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useCountryDetails } from '../API/mocks';
+import { useCountryDetails } from '../API';
 
 import { COUNTRIES_ISO } from '../constants/countries';
 

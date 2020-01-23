@@ -12,13 +12,16 @@ export const useCountriesWithData = () => {
   });
 };
 
-export const useCountryDetails = () => {
+export const useCountryDetails = selectedCountryCode => {
     return useAxios({
-      url: `${API_BASE_URL}/translator?global_customer_id=1&report_date=2020-01-23&country_code=1`,
+      url: `${API_BASE_URL}/translator`,
       method: "GET",
       headers: {
       },
       params: {
+          global_customer_id: 1,
+          report_date: '2020-01-23',
+          country_code: selectedCountryCode,
       },
     });
   };
