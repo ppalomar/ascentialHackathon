@@ -19,13 +19,23 @@ export const useCountryDetails = code => {
     },{
         source: "Frigorifero",
         target: "Fridge",
-        score: 88,
+        score: 100,
         code: 'IT',
     },{
         source: "Cravatta nera",
         target: "Black tie",
-        score: 40,
+        score: 90,
         code: 'IT',
+    },{
+        source: "蓝色T恤",
+        target: "Blue t-shirt",
+        score: 66,
+        code: 'CN',
+    },{
+        source: "螺丝刀",
+        target: "Screwdriver",
+        score: 87,
+        code: 'CN',
     }];
 
     const response = [
