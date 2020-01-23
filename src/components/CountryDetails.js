@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useCountryDetails } from '../API';
+import { useCountryDetails } from '../API/mocks';
 
 import { COUNTRIES_ISO } from '../constants/countries';
 
@@ -9,7 +9,7 @@ import Table from './Table';
 import './CountryDetails.css';
 
 const CountryDetails = ({ selectedCountryCode }) => {
-    const [{ loading, data }]  = useCountryDetails();
+    const [{ loading, data }]  = useCountryDetails(selectedCountryCode);
     
     return (
         <div className='container'>
