@@ -7,23 +7,23 @@ export const useCountriesWithData = () => [
 
 export const useCountryDetails = code => {
     const data = [{
-        source: "Hola",
-        target: "Hello",
+        source: "Televisor de alta resolucion",
+        target: "High resolution TV",
         score: 88,
         code: 'ES',
     },{
-        source: "Adios",
-        target: "Bye",
+        source: "Ordenador Portatil",
+        target: "Laptop",
         score: 40,
         code: 'ES',
     },{
-        source: "Ciao",
-        target: "Hello",
+        source: "Frigorifero",
+        target: "Fridge",
         score: 88,
         code: 'IT',
     },{
-        source: "Buona Fortuna",
-        target: "Good Luck",
+        source: "Cravatta nera",
+        target: "Black tie",
         score: 40,
         code: 'IT',
     }];
